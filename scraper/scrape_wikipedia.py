@@ -17,9 +17,8 @@ def scrape_page_revisions(page_title, limit=50):
     
     url = "https://en.wikipedia.org/w/api.php"
     
-    # Add headers with user agent to identify our scraper
     headers = {
-        'User-Agent': 'WikipediaChangesTracker/1.0 (https://github.com/yourusername/wikipedia-changes-tracker; your@email.com)'
+        'User-Agent': 'WikipediaChangesTracker/1.0 (https://github.com/yourusername/wikipedia-changes-tracker)'
     }
     
     params = {
@@ -32,6 +31,7 @@ def scrape_page_revisions(page_title, limit=50):
     }
     
     try:
+        time.sleep(1)
         response = requests.get(url, params=params, headers=headers)
         response.raise_for_status()
         data = response.json()
@@ -47,7 +47,7 @@ def scrape_page_revisions(page_title, limit=50):
         page_id = list(pages.keys())[0]
         revisions = pages[page_id].get('revisions', [])
         
-        print(f"Scraped {len(revisions)} revisions -> {filename}")
+        print(f"Success: Scraped {len(revisions)} revisions -> {filename}")
         return filename
         
     except Exception as e:
@@ -55,5 +55,4 @@ def scrape_page_revisions(page_title, limit=50):
         return None
 
 if __name__ == "__main__":
-    # Test with a smaller limit first
     scrape_page_revisions("Volkswagen_Golf", limit=10)

@@ -7,7 +7,7 @@ import glob
 
 def load_to_database():
     """Load all JSON files to database"""
-    print(" Loading data to database...")
+    print("Loading data to database...")
     
     conn = sqlite3.connect('database/wiki_edits.db')
     cursor = conn.cursor()
@@ -67,15 +67,15 @@ def load_to_database():
     cursor.execute("SELECT COUNT(DISTINCT user) FROM edits")
     user_count = cursor.fetchone()[0]
     
-    print(f" Loaded {total_edits} edits from {len(json_files)} files")
-    print(f" Statistics:")
+    print(f"Loaded {total_edits} edits from {len(json_files)} files")
+    print(f"Statistics:")
     print(f"   - Pages tracked: {page_count}")
     print(f"   - Unique editors: {user_count}")
     print(f"   - Total edits: {total_edits}")
     
     # Show sample
     cursor.execute("SELECT page, date, COUNT(*) as edits FROM edits GROUP BY page, date LIMIT 5")
-    print(f"\n Sample time-series data:")
+    print(f"\nSample time-series data:")
     for row in cursor.fetchall():
         print(f"   {row[0]} on {row[1]}: {row[2]} edits")
     
