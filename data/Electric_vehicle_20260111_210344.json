@@ -1,0 +1,83 @@
+{
+  "continue": {
+    "rvcontinue": "20251212160116|1327096410",
+    "continue": "||"
+  },
+  "query": {
+    "normalized": [
+      {
+        "from": "Electric_vehicle",
+        "to": "Electric vehicle"
+      }
+    ],
+    "pages": {
+      "279350": {
+        "pageid": 279350,
+        "ns": 0,
+        "title": "Electric vehicle",
+        "revisions": [
+          {
+            "user": "EV stuff",
+            "timestamp": "2026-01-11T11:43:05Z",
+            "size": 152803,
+            "comment": "/* National electric road projects */"
+          },
+          {
+            "user": "EV stuff",
+            "timestamp": "2026-01-11T11:41:58Z",
+            "size": 152780,
+            "comment": "/* Electric roads */ trimming Sweden paragraph, fixing ref date"
+          },
+          {
+            "user": "Willondon",
+            "timestamp": "2026-01-06T16:11:14Z",
+            "size": 153037,
+            "comment": "Undid 2 revisions from [[Special:Diff/1331490169|1331490169]] until [[Special:Diff/1331493264|1331493264]]; revert last 2 edits; removes sourced content; adds unsourced content"
+          },
+          {
+            "user": "Crispyyy12",
+            "timestamp": "2026-01-06T15:59:27Z",
+            "size": 154121,
+            "comment": "/* History */ Added links and information"
+          },
+          {
+            "user": "Crispyyy12",
+            "timestamp": "2026-01-06T15:39:01Z",
+            "size": 154289,
+            "comment": "Added content"
+          },
+          {
+            "user": "ClueBot NG",
+            "timestamp": "2026-01-06T15:34:41Z",
+            "size": 153037,
+            "comment": "Reverting possible vandalism by [[Special:Contribs/Crispyyy12|Crispyyy12]] to version by Achmad Rachmani. [[WP:CBFP|Report False Positive?]] Thanks, [[WP:CBNG|ClueBot NG]]. (4467163) (Bot)"
+          },
+          {
+            "user": "Crispyyy12",
+            "timestamp": "2026-01-06T15:34:24Z",
+            "size": 152563,
+            "comment": "Added content"
+          },
+          {
+            "user": "Achmad Rachmani",
+            "timestamp": "2026-01-02T22:15:42Z",
+            "size": 153037,
+            "comment": "/* Environmental impact */ Altered authors 1-1. Added authors 1-4."
+          },
+          {
+            "user": "The Account 2",
+            "timestamp": "2025-12-25T10:31:27Z",
+            "size": 153013,
+            "comment": ""
+          },
+          {
+            "user": "The Account 2",
+            "timestamp": "2025-12-25T10:26:46Z",
+            "size": 152734,
+            "comment": "seems important to mention at 70 percent"
+          }
+        ]
+      }
+    }
+  }
+}

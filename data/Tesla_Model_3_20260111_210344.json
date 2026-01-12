@@ -1,0 +1,88 @@
+{
+  "continue": {
+    "rvcontinue": "20251122005641|1323480260",
+    "continue": "||"
+  },
+  "query": {
+    "normalized": [
+      {
+        "from": "Tesla_Model_3",
+        "to": "Tesla Model 3"
+      }
+    ],
+    "pages": {
+      "43311976": {
+        "pageid": 43311976,
+        "ns": 0,
+        "title": "Tesla Model 3",
+        "revisions": [
+          {
+            "user": "~2026-10846-6",
+            "temp": "",
+            "timestamp": "2026-01-06T07:07:39Z",
+            "size": 178732,
+            "comment": ""
+          },
+          {
+            "user": "Wire723",
+            "timestamp": "2026-01-03T09:39:48Z",
+            "size": 178791,
+            "comment": "/* 2021 */ \"had to resell\" is opinionated"
+          },
+          {
+            "user": "RickyCourtney",
+            "timestamp": "2026-01-02T19:57:51Z",
+            "size": 178792,
+            "comment": "/* Deliveries */ Add 2025"
+          },
+          {
+            "user": "Citation bot",
+            "timestamp": "2025-12-19T21:22:37Z",
+            "size": 178465,
+            "comment": "Add: date, work, authors 1-1. Removed parameters. | [[:en:WP:UCB|Use this bot]]. [[:en:WP:DBUG|Report bugs]]. | Suggested by Abductive | #UCB_toolbar"
+          },
+          {
+            "user": "~2025-40805-05",
+            "temp": "",
+            "timestamp": "2025-12-14T22:39:09Z",
+            "size": 178417,
+            "comment": ""
+          },
+          {
+            "user": "~2025-40805-05",
+            "temp": "",
+            "timestamp": "2025-12-14T22:38:28Z",
+            "size": 178444,
+            "comment": ""
+          },
+          {
+            "user": "~2025-40805-05",
+            "temp": "",
+            "timestamp": "2025-12-14T22:36:08Z",
+            "size": 178377,
+            "comment": ""
+          },
+          {
+            "user": "~2025-40805-05",
+            "temp": "",
+            "timestamp": "2025-12-14T22:34:23Z",
+            "size": 178383,
+            "comment": ""
+          },
+          {
+            "user": "DistilledPizza",
+            "timestamp": "2025-11-28T23:24:32Z",
+            "size": 178171,
+            "comment": "Reverted 1 edit by [[Special:Contributions/Angellightcom|Angellightcom]] ([[User talk:Angellightcom|talk]]): No reason to change this, and very much not a minor edit"
+          },
+          {
+            "user": "Angellightcom",
+            "timestamp": "2025-11-28T20:29:34Z",
+            "size": 178466,
+            "comment": "safety section"
+          }
+        ]
+      }
+    }
+  }
+}

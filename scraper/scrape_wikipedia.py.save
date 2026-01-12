@@ -1,0 +1,112 @@
+""" Wikipeia Changes Scraper Extracts page revision history using Wikipedia's free API """ """ import requests import json from datetime import 
+datetime import os Wikipedia Changes Scraper def scrape_page_revisions(page_title, limit=50): Extracts page revision history using Wikipedia's free 
+API """ """ Scrape Wikipedia revision history
+    """ print(f" Scraping {page_title}...") import requests import json url = "https://en.wikipedia.org/w/api.php" from datetime import datetime 
+params = { import os "action": "query",
+        "titles": page_title, "prop": "revisions", "rvprop": "timestamp|user|size|comment|ids", "rvlimit": limit, "format": "json" def 
+scrape_page_revisions(page_title, limit=50): }
+    """ try: Scrape Wikipedia revision history response = requests.get(url, params=params) """ response.raise_for_status() print(f"🔍 Scraping 
+    {page_title}...") data = response.json()
+            
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S") filename = f"data/raw/{page_title}_{timestamp}.json" os.makedirs("data/raw", 
+        exist_ok=True)
+    url = "https://en.wikipedia.org/w/api.php" with open(filename, 'w') as f: params = { json.dump(data, f, indent=2) "action": "query", pages = 
+        data.get('query', {}).get('pages', {}) page_id = list(pages.keys())[0] revisions = pages[page_id].get('revisions', []) "titles": 
+        page_title, print(f" Scraped {len(revisions)} revisions → {filename}") return filename "prop": "revisions", "rvprop": 
+        "timestamp|user|size|comment|ids", except Exception as e: print(f" Error scraping {page_title}: {e}") return None "rvlimit": limit, 
+        "format": "json"if __name__ == "__main__":
+    }    scrape_page_revisions("Volkswagen_Golf")
+    
+    try: response = requests.get(url, params=params) response.raise_for_status() data = response.json()
+        
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S") filename = f"data/raw/{page_title}_{timestamp}.json" os.makedirs("data/raw", 
+        exist_ok=True)
+        
+        with open(filename, 'w') as f: json.dump(data, f, indent=2)
+        
+        pages = data.get('query', {}).get('pages', {}) page_id = list(pages.keys())[0] revisions = pages[page_id].get('revisions', [])
+        
+        print(f" Scraped {len(revisions)} revisions → {filename}") return filename
+        
+    except Exception as e: print(f" Error scraping {page_title}: {e}") return None if __name__ == "__main__": 
+    scrape_page_revisions("Volkswagen_Golf")
+""" Wikipedia Changes Scraper Extracts page revision history using Wikipedia's free API """ import requests import json from datetime import 
+datetime import os def scrape_page_revisions(page_title, limit=50):
+    """ Scrape Wikipedia revision history """ print(f" Scraping {page_title}...")
+    
+    url = "https://en.wikipedia.org/w/api.php" params = { "action": "query", "titles": page_title, "prop": "revisions", "rvprop": 
+        "timestamp|user|size|comment|ids", "rvlimit": limit, "format": "json"
+    }
+    
+    try: response = requests.get(url, params=params) response.raise_for_status() data = response.json()
+        
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S") filename = f"data/raw/{page_title}_{timestamp}.json" os.makedirs("data/raw", 
+        exist_ok=True)
+        
+        with open(filename, 'w') as f: json.dump(data, f, indent=2)
+        
+        pages = data.get('query', {}).get('pages', {})
+        page_id = list(pages.keys())[0]
+        revsions = pages[page_id].get('revisions', [])
+        
+        print(f" Scraped {len(revisions)} revisions → {filename}")
+        return filename
+        
+    except Exception as e:
+        print(f" Error scraping {page_title}: {e}")
+        return None
+
+if __name__ == "__main__":
+    scrape_page_revisions("Volkswagen_Golf")
+
+
+python scraper/scrape_wikipedia.pyhjkk
+cat > scraper/scrape_wikipedia.py << 'EOF'
+"""
+Wikipedia Changes Scraper
+Extracts page revision history using Wikipedia's free API
+"""
+
+import requedef scrape_page_revisions(page_title, limit=50):
+    """
+    Scrape Wikipedia revision history
+    """
+    print(f"Scraping {page_title}...")
+    
+    url = "https://en.wikipedia.org/w/api.php"
+    params = {
+        "action": "query",
+        "titles": page_title,
+        "prop": "revisions",
+        "rvprop": "timestamp|user|size|comment|ids",
+        "rvlimit": limit,
+        "format": "json"
+    }
+    
+    try:
+        response = requests.get(url, params=params)
+        response.raise_for_status()
+        data = response.json()
+        
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"data/raw/{page_title}_{timestamp}.json"
+        os.makedirs("data/raw", exist_ok=True)
+        
+        with open(filename, 'w') as f:
+            json.dump(data, f, indent=2)
+        
+        pages = data.get('query', {}).get('pages', {})
+        page_id = list(pages.keys())[0]
+        revisions = pages[page_id].get('revisions', [])
+        
+        print(f"Scraped {len(revisions)} revisions -> {filename}")
+        return filename
+        
+    except Exception as e:
+        print(f"Error scraping {page_title}: {e}")
+        return None
+
+if __name__ == "__main__":
+    scrape_page_revisions("Volkswagen_Golf")
+EOF
+
